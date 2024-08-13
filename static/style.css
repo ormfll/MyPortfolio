@@ -1,0 +1,443 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --text-color: #493d30;
+    --link-color: #526dc6;
+    --background-color: #f6f4e5;
+    --black-tone: #1c1c1a;
+    --button-hover-color: #526dc6;
+    --darkmode-text: #e5e3d7;
+}
+
+* {
+    margin: 50;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 200, 400, 600;
+    background-color: var(--background-color);
+}
+.lexendDeca {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+a {
+    color:var(--link-color);
+    text-decoration: none;
+}
+
+.dark-mode {
+    background-color: var(--black-tone);
+    color: var(--darkmode-text);
+  }
+
+
+/* Nav Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+    border-bottom: 2px solid var(--text-color);
+    position: relative;
+}
+
+nav .title a {
+    color: var(--text-color);
+    margin: 20px 20px;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 10px 15px;
+    transition: color 0.3s;
+}
+
+nav .right a:hover {
+    color: var(--link-color);
+}
+
+/* Dark Mode */
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    fill: var(--text-color);
+}
+
+#dark-mode-toggle svg {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    fill: var(--text-color); /* Ensure visibility in light mode */
+    transition: fill 0.3s;
+}
+
+#dark-mode-toggle:hover svg {
+    fill: var(--link-color);
+}
+
+/* Dark Mode Style */
+.dark-mode #dark-mode-toggle svg {
+    fill: var(--background-color);
+}
+
+.dark-mode nav {
+    border-bottom: 2px solid var(--background-color);
+}
+
+.dark-mode nav .right a {
+    color: var(--darkmode-text);
+}
+
+.dark-mode nav .title a {
+    color: var(--darkmode-text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        align-items: center; /* Center the items horizontally */
+        text-align: center; /* Center-align the text */
+    }
+
+    nav .title {
+        width: auto; /* Width of the title should be based on its content */
+        margin-bottom: 10px; /* Space between title and right section */
+    }
+
+    nav .right {
+        display: flex; /* Flexbox to arrange items in a row */
+        flex-direction: row; /* Ensure items are in a row */
+        align-items: center;
+        justify-content: center; /* Center items horizontally */
+        width: auto; /* Width of the right section based on its content */
+        gap: 10px; /* Space between items */
+    }
+
+    nav .right a {
+        margin: 0; /* Remove default margin for alignment */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav .title {
+        margin-bottom: 10px; /* Space below the title */
+    }
+
+    nav .right {
+        gap: 5px; /* Adjust space between items */
+    }
+
+    nav .right a {
+        margin: 0; /* Adjust margin for smaller screens */
+    }
+}
+
+
+/*sections*/
+
+/*hero*/
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 80px 0;
+    padding-bottom: 30px;
+    gap: 50px;
+}
+
+.hero-section img {
+    max-width: 200px;
+    height: auto;
+}
+
+.hero-section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.hero-section p {
+    max-width: 600px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.dark-mode .hero-section p {
+    color: var(--darkmode-text);
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .hero-section img {
+        width: auto;
+        height: 180px;
+    }
+
+    .hero-section h2 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 15px;
+    }
+
+    .hero-section img {
+        width: auto;
+        height: 180px;
+    }
+
+    .hero-section h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .hero-section img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-section p {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+}
+
+/*work*/
+.previousprojects {
+    position: relative;
+    padding: 70px;
+    border-top: 2px solid var(--text-color);
+    margin: 80px 0;
+    padding-bottom: 30px;
+    gap: 50px;
+}
+
+.previousprojects .bottom {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.previousprojects .bottom h2 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.previousprojects .top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.previousprojects .top > div {
+    text-align: center;
+    width: 300px;
+}
+
+.previousprojects .top img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.previousprojects .top h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 2px solid var(--text-color);
+    border-radius: 10px;
+    padding: 10px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.previousprojects .top p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+/*dark mode*/
+
+.dark-mode .previousprojects {
+    border-top: 2px solid var(--darkmode-text);
+}
+
+.dark-mode .previousprojects .top p {
+    margin: 0;
+    color: var(--darkmode-text);
+}
+
+.dark-mode .previousprojects .top h3 {
+    border: 2px solid var(--darkmode-text);
+}
+
+
+
+/*skills*/
+
+.skills {
+    padding: 70px;
+    border-bottom: 2px solid var(--text-color);
+    border-top: 2px solid var(--text-color);
+}
+
+.skills .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills .text h2 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.skills .skills-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px;
+}
+
+.skills .skills-boxes img {
+    width: 50px;
+    height: 50px; 
+    border-radius: 8px; 
+}
+
+.dark-mode .skills {
+    border-top: 2px solid var(--darkmode-text);
+    border-bottom: 2px solid var(--darkmode-text);
+}
+
+/*download my resume*/
+
+.resume {
+    text-align: center; 
+    padding: 70px 20px; 
+    margin: 20px auto; 
+    max-width: 600px;
+}
+
+.resume h2 {
+    font-size: 2em;
+    font-weight: bold; 
+    margin-bottom: 20px; 
+}
+
+.resume button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #000; 
+    color: #f5f5dc;
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Button hover effect */
+.resume button:hover {
+    background-color:var(--button-hover-color);
+    color: var(--background-color);
+}
+
+
+/* Footer styling */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: #000;
+    color: #f5f5dc;
+    padding: 20px; 
+    text-align: center;
+}
+
+/* Title styling */
+.footer .title {
+    margin-bottom: 20px; 
+}
+
+.footer .title a { 
+    color: #f5f5dc;
+    text-decoration: none; 
+}
+
+.footer .right a {
+    color: #f5f5dc;
+    text-decoration: none; 
+    margin: 10px 15px;
+    transition: color 0.3s; 
+}
+
+.footer .right a:hover {
+    color: var(--link-color);
+}
+
+
+.footer::before {
+    content: "";
+    display: block;
+    height: 2px; 
+    background-color: #f5f5dc; 
+    margin-bottom: 10px; 
+}
