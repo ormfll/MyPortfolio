@@ -118,26 +118,26 @@ nav .right a:hover {
     nav {
         flex-direction: column;
         padding: 15px;
-        align-items: center; /* Center the items horizontally */
-        text-align: center; /* Center-align the text */
+        align-items: center; 
+        text-align: center; 
     }
 
     nav .title {
-        width: auto; /* Width of the title should be based on its content */
-        margin-bottom: 10px; /* Space between title and right section */
+        width: auto;
+        margin-bottom: 10px;
     }
 
     nav .right {
-        display: flex; /* Flexbox to arrange items in a row */
-        flex-direction: row; /* Ensure items are in a row */
+        display: flex; 
+        flex-direction: row;
         align-items: center;
-        justify-content: center; /* Center items horizontally */
-        width: auto; /* Width of the right section based on its content */
-        gap: 10px; /* Space between items */
+        justify-content: center;
+        width: auto; 
+        gap: 10px;
     }
 
     nav .right a {
-        margin: 0; /* Remove default margin for alignment */
+        margin: 0;
     }
 }
 
@@ -147,16 +147,17 @@ nav .right a:hover {
     }
 
     nav .title {
-        margin-bottom: 10px; /* Space below the title */
+        margin-bottom: 10px; 
     }
 
     nav .right {
-        gap: 5px; /* Adjust space between items */
+        gap: 5px; 
     }
 
     nav .right a {
-        margin: 0; /* Adjust margin for smaller screens */
-    }
+        margin: 0; 
+}
+
 }
 
 
